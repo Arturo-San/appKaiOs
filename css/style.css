@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap');
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+label{
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+h1{
+	color: #0a3d7e;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.K-brand{
+	display: block;
+	margin: 14px auto;
+	width: 100px;
+}
+
+.K-text--center{
+	text-align: center;
+}
+
+.K-form-group{
+	padding: 10px;
+}
+
+.K-form-group--focus{
+	background: #e5edf5;
+}
+
+.K-form-control{
+	width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #bac9d8;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 7px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+  font-size: 17px;
+}
+
+.K-form-control--focus, .K-form-control:focus{
+	border-color: #0071d1;
+	box-shadow: none;
+	outline: none;
+}
+
+.K-softkey{
+	background: #0071d1;
+	bottom: 0;
+	color: #ffffff;
+	display: block;
+	font-size: 14px;
+	height: 30px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+}
+
+.K-softkey:after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.K-softkey div{
+	float: left;
+	padding: 6px 5px;
+	width: 33.333333%;
+}
+
+.K-softkey div:nth-child(2){
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px 5px;
+	text-align: center;
+}
+
+.K-softkey div:nth-child(3){
+	text-align: right;
+}
