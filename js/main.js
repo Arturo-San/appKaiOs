@@ -26,12 +26,6 @@ function handleKeyDown(evt) {
         case 'ArrowDown':
             nav(1);
             break;
-        case 'ArrowRight':
-            nav(1);
-            break;
-        case 'ArrowLeft':
-            nav(-1);
-            break;
     }
 };
 
@@ -65,16 +59,49 @@ function nav (move) {
     targetElement.focus();
 }
 
+function elementBlur(){
+    const currentIndex = document.activeElement.tabIndex;
+    const items = document.querySelectorAll('.focusable');
+    const targetElement = items[currentIndex];
+    if(currentIndex != -1)
+        targetElement.blur();
+}
+
 document.addEventListener('keydown', handleKeyDown);
 
-formContainer = document.getElementById('form');
+function inputsUiEvents(){
+    var inputs = document.querySelectorAll('.focusable');
+    for (var i = 0 ; i < inputs.length; i++) {
+        inputs[i].addEventListener("focus", function(event){
+            addClass(event.target.parentNode, 'K-form-group--focus');
+        });
+        inputs[i].addEventListener("blur", function(event){
+            removeClass(event.target.parentNode , 'K-form-group--focus');
+        });
+    }
+}
 
-document.querySelectorAll('.focusable').forEach(function(element){
-    element.addEventListener("focus", function(event){
-        event.target.parentNode.classList.add('K-form-group--focus');
-    });
-    element.addEventListener("blur", function(event){
-        event.target.parentNode.classList.remove('K-form-group--focus');
-    });
-});
+inputsUiEvents();
 
+function hasClass(el, className){
+    if (el.classList)
+        return el.classList.contains(className);
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+}
+
+function addClass(el, className){
+    if (el.classList)
+        el.classList.add(className)
+    else if (!hasClass(el, className))
+        el.className += " " + className;
+}
+
+function removeClass(el, className){
+    if (el.classList)
+        el.classList.remove(className)
+    else if (hasClass(el, className))
+    {
+        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+        el.className = el.className.replace(reg, ' ');
+    }
+}

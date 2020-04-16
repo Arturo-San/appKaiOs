@@ -98,3 +98,70 @@ h1{
 .K-softkey div:nth-child(3){
 	text-align: right;
 }
+
+.K-alert{
+	display: none;
+	background: rgba(0,0,0,.5);
+	bottom: 30px;
+	height: calc( 100% - 30px );
+	position: fixed;
+	width: 100%;
+}
+
+.K-alert__content{
+	background: #ccc;
+	bottom: 30px;
+	position: fixed;
+}
+
+.K-alert__header{
+	background: #ffffff;
+	border-top: solid 2px #333;
+	padding: 5px 10px;
+}
+
+.K-alert__header h1, .K-alert__header h2, .K-alert__header h3{
+	font-size: 17px;
+	margin: 0;
+	text-align: center;
+}
+
+.k-alert__body{
+	padding: 5px 10px;
+}
+
+.k-alert__body p{
+	font-size: 17px;
+}
+
+.k-alert__body p:first-child, .k-alert__body p:last-child{
+	margin: 0;
+}
+
+.K-alert.K-alert--error .K-alert__header{
+	border-color: #d32222;
+}
+
+.K-alert.K-alert--error .K-alert__header h1, .K-alert.K-alert--error .K-alert__header h2, .K-alert.K-alert--error .K-alert__header h3{
+	color: #d32222;
+}
+
+.K-alert.K-alert--error .K-alert__content{
+	background: #fdf2f2;
+}
+
+.K-alert.K-alert--success .K-alert__header{
+	border-color: #008000;
+}
+
+.K-alert.K-alert--success .K-alert__header h1, .K-alert.K-alert--success .K-alert__header h2, .K-alert.K-alert--success .K-alert__header h3{
+	color: #008000;
+}
+
+.K-alert.K-alert--success .K-alert__content{
+	background: #eff7ef;
+}
+
+
+
+
