@@ -1,7 +1,7 @@
 {
   "version": "1",
   "name": "KaiOS MT",
-  "launch_path": "/index.html",
+  "launch_path": "/appKaiOs/index.html",
   "description": "KaiOS hosted app with example use cases to get started",
   "icons": {
     "16": "/images/icons/logo16.png",
